@@ -17,3 +17,5 @@ const reverseVowels = str => {
   let vowels = str.replace(/[^aeiou]/gi, '').split('');
   return str.replace(/[aeiou]/gi, _ => vowels.pop());
 };
+
+// or
