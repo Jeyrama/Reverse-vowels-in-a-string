@@ -19,3 +19,34 @@ const reverseVowels = str => {
 };
 
 // or
+
+function reverseVowels(str) {
+  const vowels = {
+    "A": true,
+    "E": true,
+    "I": true,
+    "O": true,
+    "U": true
+  }
+  const arr = str.split('')
+  let p1 = 0;
+  let p2 = arr.length - 1
+  
+  while(p1 < p2){
+    const letter1 = arr[p1].toUpperCase()
+    const letter2 = arr[p2].toUpperCase()
+    if(vowels[letter1] && vowels[letter2]){
+      const temp = arr[p1]
+      arr[p1] = arr[p2]
+      arr[p2] = temp
+      p1++
+      p2--
+    } else if(vowels[letter1]) p2--
+      else if(vowels[letter2]) p1++
+      else {
+        p1++
+        p2--
+      }
+  }
+  return arr.join('')
+}
