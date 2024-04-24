@@ -9,3 +9,6 @@ Here are some examples:
 
 For simplicity, you can treat the letter y as a consonant, not a vowel.
 */
+
+
+// Solution
